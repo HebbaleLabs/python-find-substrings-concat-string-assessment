@@ -1,6 +1,6 @@
 import unittest
 from parameterized import parameterized
-from find_substrings import find_substrings_equal_concatenation
+from find_substrings import is_matching_concat_string_pair
 
 
 class FindSubstringsTest(unittest.TestCase):
@@ -16,8 +16,8 @@ class FindSubstringsTest(unittest.TestCase):
   def test_find_concatenation_simple(self, name, strings,
       desired_concatenated_string,
       expected_found):
-    actual_found = find_substrings_equal_concatenation(strings,
-                                                       desired_concatenated_string)
+    actual_found = is_matching_concat_string_pair(strings,
+                                                  desired_concatenated_string)
     message = 'For input values: {0}, desired_concatenated_string = \'{1}\', expected value = {2}, and actual value = {3}'.format(
         strings, desired_concatenated_string, expected_found, actual_found)
     self.assertEqual(expected_found, actual_found, message)
@@ -31,8 +31,8 @@ class FindSubstringsTest(unittest.TestCase):
   def test_find_concatenation_ordered(self, name, strings,
       desired_concatenated_string,
       expected_found):
-    actual_found = find_substrings_equal_concatenation(strings,
-                                                       desired_concatenated_string)
+    actual_found = is_matching_concat_string_pair(strings,
+                                                  desired_concatenated_string)
     message = 'For input values: {0}, desired_concatenated_string = \'{1}\', expected value = {2}, and actual value = {3}'.format(
         strings, desired_concatenated_string, expected_found, actual_found)
     self.assertEqual(expected_found, actual_found, message)
@@ -46,8 +46,8 @@ class FindSubstringsTest(unittest.TestCase):
   def test_find_concatenation_unordered(self, name, strings,
       desired_concatenated_string,
       expected_found):
-    actual_found = find_substrings_equal_concatenation(strings,
-                                                       desired_concatenated_string)
+    actual_found = is_matching_concat_string_pair(strings,
+                                                  desired_concatenated_string)
     message = 'For input values: {0}, desired_concatenated_string = \'{1}\', expected value = {2}, and actual value = {3}'.format(
         strings, desired_concatenated_string, expected_found, actual_found)
     self.assertEqual(expected_found, actual_found, message)
@@ -61,8 +61,8 @@ class FindSubstringsTest(unittest.TestCase):
   def test_find_concatenation_duplicates(self, name, strings,
       desired_concatenated_string,
       expected_found):
-    actual_found = find_substrings_equal_concatenation(strings,
-                                                       desired_concatenated_string)
+    actual_found = is_matching_concat_string_pair(strings,
+                                                  desired_concatenated_string)
     message = 'For input values: {0}, desired_concatenated_string = \'{1}\', expected value = {2}, and actual value = {3}'.format(
         strings, desired_concatenated_string, expected_found, actual_found)
     self.assertEqual(expected_found, actual_found, message)
@@ -74,8 +74,8 @@ class FindSubstringsTest(unittest.TestCase):
   def test_find_concatenation_edgecase(self, name, strings,
       desired_concatenated_string,
       expected_found):
-    actual_found = find_substrings_equal_concatenation(strings,
-                                                       desired_concatenated_string)
+    actual_found = is_matching_concat_string_pair(strings,
+                                                  desired_concatenated_string)
     message = 'For input values: {0}, desired_concatenated_string = \'{1}\', expected value = {2}, and actual value = {3}'.format(
         strings, desired_concatenated_string, expected_found, actual_found)
     self.assertEqual(expected_found, actual_found, message)
